@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -124,7 +125,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     padding:EdgeInsets.only(left: 230),
                     child: TextButton(
                       onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
+                       // Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
+                        //Navigator.push(context, PageTransition(child: ForgotPassword(), type: PageTransitionType.leftToRightJoined,childCurrent: widget));
+                        Navigator.push(context, PageTransition(child: ForgotPassword(), type: PageTransitionType.leftToRight));
 
                     },
                         child: Text("Forgot Password ?",style: TextStyle(color: Colors.black)),
@@ -142,8 +145,9 @@ class _SignInScreenState extends State<SignInScreen> {
                             value) {
                           Fluttertoast.showToast(
                               msg: "Login Successfully Welcome to the DashBoard");
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Home()));
+                          // Navigator.push(context,
+                          //     MaterialPageRoute(builder: (context) => Home()));
+                          Navigator.push(context, PageTransition(child: Home(), type: PageTransitionType.leftToRight));
                         }).onError((error, stackTrace) {
                          // print("error ${error.toString()}");
                           // var snackBar = SnackBar(content: Text(error.toString()),backgroundColor: Color(0XFF292E49),);
@@ -174,7 +178,8 @@ class _SignInScreenState extends State<SignInScreen> {
                       children: [
                         Text("Don't have an account ?"),
                         TextButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
+                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
+                          Navigator.push(context, PageTransition(child: SignUpScreen(), type: PageTransitionType.leftToRight));
                         },
                             child: Text("Sign Up",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),),
                         ),

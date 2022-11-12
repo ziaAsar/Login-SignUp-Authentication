@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -27,8 +28,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
           password: passwordTextController2.text).then((value) {
         Fluttertoast.showToast(
             msg: "Account Created Successfully");
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => Home()));
+        // Navigator.push(context,
+        //     MaterialPageRoute(builder: (context) => Home()));
+        Navigator.push(context, PageTransition(child: Home(), type: PageTransitionType.leftToRight));
       }).onError((error, stackTrace) {
         print("error ${error.toString()}");
       });
