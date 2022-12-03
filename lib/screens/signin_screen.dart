@@ -42,6 +42,7 @@ class _SignInScreenState extends State<SignInScreen> {
               key: formKey,
               child: Column(
                 children: [
+                 // Text("Hello sir",style: TextStyle(fontSize: 68),),
                  Image.asset("assets/Image/My.png",
                    fit: BoxFit.fill,
                    height: 370,

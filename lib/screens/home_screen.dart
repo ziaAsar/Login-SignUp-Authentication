@@ -19,7 +19,8 @@ class _HomeState extends State<Home> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Welcome to the Dashboard"),
+        Image.asset("assets/Image/f.png"),
+          Text("Welcome to the Dashboard",style: TextStyle(color: Colors.black),),
           ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
           },
