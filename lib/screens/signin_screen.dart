@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:firebase/screens/ResetPassword.dart';
 import 'package:firebase/screens/home_screen.dart';
 import 'package:firebase/screens/signup_screen.dart';
@@ -7,8 +6,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:page_transition/page_transition.dart';
-
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
@@ -21,6 +20,31 @@ class _SignInScreenState extends State<SignInScreen> {
   GlobalKey<FormState> formKey =GlobalKey<FormState>();
   TextEditingController emailTextController= TextEditingController();
   TextEditingController passwordTextController= TextEditingController();
+
+  _handleGoogleBtnClick(){
+  _signInWithGoogle().then((value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Home())));
+  }
+
+  Future<UserCredential> _signInWithGoogle() async {
+    // Trigger the authentication flow
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+    // Create a new credential
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+    // Once signed in, return the UserCredential
+    return await FirebaseAuth.instance.signInWithCredential(credential);
+  }
+
+  signOut() async{
+    await FirebaseAuth.instance.signOut();
+    await GoogleSignIn().signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +61,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.only(top: 70,right: 7,left: 7),
+            padding: EdgeInsets.only(top: 35,right: 7,left: 7),
             child: Form(
               key: formKey,
               child: Column(
@@ -158,8 +182,6 @@ class _SignInScreenState extends State<SignInScreen> {
                       }else{
                         Fluttertoast.showToast(msg: "Field Can't be Empty");
                       }
-
-
                     },
 
                         child: Text("Login",style:TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold)),
@@ -173,7 +195,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.only(top: 5),
                     child:Row (
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -184,9 +206,42 @@ class _SignInScreenState extends State<SignInScreen> {
                         },
                             child: Text("Sign Up",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),),
                         ),
+
                       ],
                     ),
-                  )
+                  ),
+                  InkWell(
+                    hoverColor: Colors.deepOrange,
+                    child: Container(
+                      padding: EdgeInsets.only(left: 5,right: 5),
+                      height: 68,
+                      width: 300,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            elevation: 15,
+                            backgroundColor: Colors.white70,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+                          onPressed: () {
+                            _handleGoogleBtnClick();
+                          },
+                          child: Row(
+                            //mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 1,right:1,top: 6,bottom: 7),
+                                child: Image.asset("assets/Image/google.png"),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(child: Text("Sign in With Google",style: TextStyle(color: Colors.black,fontSize: 19,fontWeight: FontWeight.bold))),
+                              ),
+                            ],
+                          )
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

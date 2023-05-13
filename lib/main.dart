@@ -1,5 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:firebase/screens/home_screen.dart';
 import 'package:firebase/screens/signin_screen.dart';
+import 'package:firebase/screens/signup_screen.dart';
 import 'package:firebase/screens/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home:Screen(),
-      );
+      home:SignInScreen()
+    );
   }
 }

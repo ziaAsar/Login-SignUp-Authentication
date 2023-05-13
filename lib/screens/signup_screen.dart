@@ -61,15 +61,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.only(top: 70,right: 7,left: 7),
+            padding: EdgeInsets.only(top: 35,right: 4,left: 4,bottom: 1),
             child: Form(
               key: UserKey,
               child: Column(
                 children: [
                   Image.asset("assets/Image/signup.png",
-                    fit: BoxFit.fill,
-                    height: 370,
-                    width: 500,
+                    fit: BoxFit.cover,
+                    height: MediaQuery.of(context).size.height/2.5,
+                    width: MediaQuery.of(context).size.width,
                   ),
                   SizedBox(
                     height: 10,
@@ -100,7 +100,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 18,
                   ),
                   Padding(
                     padding: EdgeInsets.only(right: 8,left: 8),
@@ -130,7 +130,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 18,
                   ),
                   Padding(
                     padding:  EdgeInsets.only(right: 8,left: 8),
@@ -169,7 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 18,
                   ),
                   Container(
                     padding: EdgeInsets.only(left: 5,right: 5),
@@ -198,6 +198,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 18,
+                  ),
+
                 ],
               ),
             ),
