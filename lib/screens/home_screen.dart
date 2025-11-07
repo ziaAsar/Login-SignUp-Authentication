@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import 'package:awesome_dialog/awesome_dialog.dart';
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase/screens/signin_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -5,7 +9,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+<<<<<<< HEAD
 
+=======
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -17,16 +24,24 @@ class _HomeState extends State<Home> {
   signOut() async{
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
+<<<<<<< HEAD
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignInScreen(),
     ));
   }
 
+=======
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
+  }
+
+
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
   @override
   Widget build(BuildContext context) {
     Connectivity connectivity = Connectivity();
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+<<<<<<< HEAD
           iconTheme: IconThemeData(
             color: Colors.white, // change the color of the back arrow
           ),
@@ -44,6 +59,15 @@ class _HomeState extends State<Home> {
               color: Colors.white,
             ),
           ),
+=======
+          actions: [
+            IconButton(onPressed: (){
+              signOut();
+            }, icon: Icon(Icons.logout))
+          ],
+          backgroundColor: Color(0xff1E425D),
+          title: Text("Internet Connection Checker"),
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
         ),
         body: StreamBuilder<ConnectivityResult>(
           stream: connectivity.onConnectivityChanged,
@@ -57,7 +81,10 @@ class _HomeState extends State<Home> {
                           child: Column(
                             children: [
                               Text("Just Close the internet connection and you can see the Dialog box"),
+<<<<<<< HEAD
 
+=======
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
                               SizedBox(
                                 height: 10,
                               ),
@@ -110,6 +137,10 @@ class InternetConnectionWidget extends StatelessWidget {
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
 Widget DialogBox(){
   return AlertDialog(
 

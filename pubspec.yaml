@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   fluttertoast: ^8.0.9
   velocity_x: ^3.3.0
+<<<<<<< HEAD
   firebase_core: ^4.2.0
   firebase_auth: ^6.1.1
   form_field_validator: ^1.1.0
@@ -46,6 +47,17 @@ dependencies:
   google_sign_in: ^6.1.0
 #  curved_splash_screen: ^1.0.0+1
   connectivity_plus: ^4.0.0
+=======
+  firebase_core: ^2.0.0
+  firebase_auth: ^4.0.1
+  form_field_validator: ^1.1.0
+  animated_splash_screen: ^1.3.0
+  page_transition: ^2.0.9
+  curved_splash_screen: ^1.0.0+1
+  connectivity_plus: ^4.0.0
+  awesome_dialog: ^3.0.2
+  google_sign_in: ^6.1.0
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
 
 dev_dependencies:
   flutter_test:

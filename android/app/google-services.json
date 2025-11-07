@@ -2,7 +2,11 @@
   "project_info": {
     "project_number": "258766299020",
     "project_id": "login-authentication-c016b",
+<<<<<<< HEAD
     "storage_bucket": "login-authentication-c016b.firebasestorage.app"
+=======
+    "storage_bucket": "login-authentication-c016b.appspot.com"
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
   },
   "client": [
     {
@@ -14,6 +18,7 @@
       },
       "oauth_client": [
         {
+<<<<<<< HEAD
           "client_id": "258766299020-7708ak2dm029a2hncrvhk8s4iiudgh64.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -23,6 +28,9 @@
         },
         {
           "client_id": "258766299020-si8mvvhevvg40ah6rfmt3ea02106bokm.apps.googleusercontent.com",
+=======
+          "client_id": "258766299020-n3ki4c77o380udrg6cu6lugq531trmhq.apps.googleusercontent.com",
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
           "client_type": 3
         }
       ],
@@ -37,6 +45,7 @@
             {
               "client_id": "258766299020-n3ki4c77o380udrg6cu6lugq531trmhq.apps.googleusercontent.com",
               "client_type": 3
+<<<<<<< HEAD
             },
             {
               "client_id": "258766299020-ad8p38ff1fbe2jcqanpco49t7c1nic0m.apps.googleusercontent.com",
@@ -44,6 +53,8 @@
               "ios_info": {
                 "bundle_id": "com.example.firebase"
               }
+=======
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
             }
           ]
         }

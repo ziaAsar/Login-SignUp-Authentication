@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import 'dart:ffi';
+
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
 import 'package:firebase/screens/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,6 +23,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   TextEditingController emailTextController = TextEditingController();
   TextEditingController passwordTextController2 = TextEditingController();
 
+<<<<<<< HEAD
   void Validate(){
     if(UserKey.currentState!.validate()){
       FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -34,6 +40,24 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       Fluttertoast.showToast(msg: "Field Required");
     }
   }
+=======
+  // void Validate(){
+  //   if(UserKey.currentState!.validate()){
+  //     FirebaseAuth.instance.createUserWithEmailAndPassword(
+  //         email: emailTextController.text,
+  //         password: passwordTextController2.text).then((value) {
+  //       Fluttertoast.showToast(
+  //           msg: "Account Created Successfully");
+  //       Navigator.push(context,
+  //           MaterialPageRoute(builder: (context) => Home()));
+  //     }).onError((error, stackTrace) {
+  //       print("error ${error.toString()}");
+  //     });
+  //   }else{
+  //     Fluttertoast.showToast(msg: "Field Required");
+  //   }
+  // }
+>>>>>>> c558a348ddb15ec951033d37badc00347aad2782
   Future ResetPassword() async {
     try {
       await FirebaseAuth.instance
