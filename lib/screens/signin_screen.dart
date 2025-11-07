@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
+
 import 'dart:ui';
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
 import 'package:firebase/screens/ResetPassword.dart';
 import 'package:firebase/screens/home_screen.dart';
 import 'package:firebase/screens/signup_screen.dart';
@@ -9,13 +7,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-<<<<<<< HEAD
+
 import 'package:page_transition/page_transition.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-=======
+
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:page_transition/page_transition.dart';
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
@@ -51,15 +49,14 @@ class _SignInScreenState extends State<SignInScreen> {
 
   signOut() async{
     await FirebaseAuth.instance.signOut();
-<<<<<<< HEAD
+
+    // await GoogleSignIn().signOut();
+  // }
 
     await GoogleSignIn().signOut();
   }
-=======
-    await GoogleSignIn().signOut();
-  }
 
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -147,10 +144,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                       obscureText: _secureText,
                       onTap: (){
-<<<<<<< HEAD
-=======
 
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
                       },
                       // style: TextStyle(color: Colors.black),
                       validator:MultiValidator([
@@ -164,11 +158,11 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 1,
                   ),
                   Padding(
-<<<<<<< HEAD
-                    padding:EdgeInsets.only(left: 220),
-=======
+
+                    // padding:EdgeInsets.only(left: 220),
+
                     padding:EdgeInsets.only(left: 230),
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
                     child: TextButton(
                       onPressed: (){
                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
@@ -181,11 +175,11 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                   Container(
                     padding: EdgeInsets.only(left: 5,right: 5),
-<<<<<<< HEAD
+
                     height: 55,
-=======
-                    height: 68,
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
+                    // height: 68,
+
                     width: double.infinity,
                     child: ElevatedButton(onPressed: (){
                       if(formKey.currentState!.validate()) {
@@ -208,10 +202,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         Fluttertoast.showToast(msg: "Field Can't be Empty");
                       }
                     },
-<<<<<<< HEAD
-=======
 
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
                         child: Text("Login",style:TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold)),
                       style:ElevatedButton.styleFrom(
                         backgroundColor: Colors.transparent,
@@ -232,14 +223,14 @@ class _SignInScreenState extends State<SignInScreen> {
                          // Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
                           Navigator.push(context, PageTransition(child: SignUpScreen(), type: PageTransitionType.leftToRight));
                         },
-<<<<<<< HEAD
+
                             child: Text("Sign Up2",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),),
                         ),
-=======
-                            child: Text("Sign Up",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),),
-                        ),
 
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+                            // child: Text("Sign Up",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),),
+
+
+
                       ],
                     ),
                   ),
@@ -247,11 +238,11 @@ class _SignInScreenState extends State<SignInScreen> {
                     hoverColor: Colors.deepOrange,
                     child: Container(
                       padding: EdgeInsets.only(left: 5,right: 5),
-<<<<<<< HEAD
-                      height: 50,
-=======
+
+                      // height: 50,
+
                       height: 68,
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
                       width: 300,
                       child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
@@ -267,11 +258,10 @@ class _SignInScreenState extends State<SignInScreen> {
                             //mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-<<<<<<< HEAD
-                                padding: const EdgeInsets.only(left: 0,right:1,top: 6,bottom: 7),
-=======
+
+
                                 padding: const EdgeInsets.only(left: 1,right:1,top: 6,bottom: 7),
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
                                 child: Image.asset("assets/Image/google.png"),
                               ),
                               Padding(
@@ -283,12 +273,12 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                   ),
-                ],
+          ],
               ),
             ),
           ),
-        ),
-      ),
-    );
+        )));
+
+
   }
 }

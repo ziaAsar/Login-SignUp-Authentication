@@ -1,9 +1,8 @@
 import 'package:firebase/screens/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-<<<<<<< HEAD
-=======
+
 import 'package:firebase_core/firebase_core.dart';
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -126,14 +125,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         RequiredValidator(errorText: "Field is Required"),
                         EmailValidator(errorText: "Correct Email is Required"),
                       ]),
-                      onTap: (){
-<<<<<<< HEAD
-                      },
-=======
+                      onTap: () {
 
-                      },
 
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+                      }
                     ),
                   ),
                   SizedBox(
@@ -208,10 +203,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   SizedBox(
                     height: 18,
                   ),
-<<<<<<< HEAD
-=======
 
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
                 ],
               ),
             ),

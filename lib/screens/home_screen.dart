@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-=======
-import 'package:awesome_dialog/awesome_dialog.dart';
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
+// import 'package:awesome_dialog/awesome_dialog.dart';
+
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase/screens/signin_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-<<<<<<< HEAD
 
-=======
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -21,32 +17,31 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  signOut() async{
+  signOut() async {
     await FirebaseAuth.instance.signOut();
     await GoogleSignIn().signOut();
-<<<<<<< HEAD
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignInScreen(),
+
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => SignInScreen(),
     ));
   }
 
-=======
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
-  }
+
+  // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignInScreen()));
 
 
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
   @override
   Widget build(BuildContext context) {
     Connectivity connectivity = Connectivity();
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-<<<<<<< HEAD
+
           iconTheme: IconThemeData(
             color: Colors.white, // change the color of the back arrow
           ),
           actions: [
-            IconButton(onPressed: (){
+            IconButton(onPressed: () {
               signOut();
             }, icon: Icon(Icons.logout),
               color: Colors.white,
@@ -59,32 +54,23 @@ class _HomeState extends State<Home> {
               color: Colors.white,
             ),
           ),
-=======
-          actions: [
-            IconButton(onPressed: (){
-              signOut();
-            }, icon: Icon(Icons.logout))
-          ],
-          backgroundColor: Color(0xff1E425D),
-          title: Text("Internet Connection Checker"),
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
+
         ),
         body: StreamBuilder<ConnectivityResult>(
-          stream: connectivity.onConnectivityChanged,
-            builder: (context,snapshot){
+            stream: connectivity.onConnectivityChanged,
+            builder: (context, snapshot) {
               return InternetConnectionWidget(
                   widget: ListView.builder(
-                    itemCount: 200,
-                      itemBuilder: (context,index){
+                      itemCount: 200,
+                      itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: Column(
                             children: [
-                              Text("Just Close the internet connection and you can see the Dialog box"),
-<<<<<<< HEAD
+                              Text(
+                                  "Just Close the internet connection and you can see the Dialog box"),
 
-=======
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
                               SizedBox(
                                 height: 10,
                               ),
@@ -92,7 +78,7 @@ class _HomeState extends State<Home> {
                                 leading: ClipRRect(
                                   borderRadius: BorderRadius.circular(50),
                                   child: Image(
-                                      image: AssetImage("assets/Image/hz.jpg"),
+                                    image: AssetImage("assets/Image/hz.jpg"),
                                   ),
                                 ),
                                 title: Text("Asar zia" + index.toString()),
@@ -112,6 +98,7 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
 class InternetConnectionWidget extends StatelessWidget {
   final AsyncSnapshot<ConnectivityResult>snapshot;
   final Widget widget;
@@ -137,10 +124,7 @@ class InternetConnectionWidget extends StatelessWidget {
     }
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
 Widget DialogBox(){
   return AlertDialog(
 

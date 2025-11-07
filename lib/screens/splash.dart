@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 
 import 'package:firebase/screens/signin_screen.dart';
 
 import 'package:flutter/material.dart';
-=======
+
 import 'dart:async';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase/screens/signin_screen.dart';
@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'ResetPassword.dart';
 import 'home_screen.dart';
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
 
 class Screen extends StatefulWidget {
   const Screen({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class Screen extends StatefulWidget {
 }
 
 class _ScreenState extends State<Screen> {
-<<<<<<< HEAD
+
   @override
   void initState() {
     super.initState();
@@ -203,7 +203,7 @@ class RPSCustomPainter extends CustomPainter {
     return true;
   }
 }
-=======
+
   // @override
   // void initState() {
   //   super.initState();
@@ -233,5 +233,5 @@ class RPSCustomPainter extends CustomPainter {
           nextScreen: SignInScreen(),
     );
   }
-}
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+
+

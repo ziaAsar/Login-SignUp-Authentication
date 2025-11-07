@@ -4,11 +4,9 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   connectivity_plus
-<<<<<<< HEAD
   firebase_auth
   firebase_core
-=======
->>>>>>> c558a348ddb15ec951033d37badc00347aad2782
+  rive_native
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
