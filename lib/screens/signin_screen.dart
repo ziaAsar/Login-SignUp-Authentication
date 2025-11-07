@@ -45,7 +45,6 @@ class _SignInScreenState extends State<SignInScreen> {
 
     await GoogleSignIn().signOut();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,7 +132,6 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                       obscureText: _secureText,
                       onTap: (){
-
                       },
                       // style: TextStyle(color: Colors.black),
                       validator:MultiValidator([
@@ -183,7 +181,6 @@ class _SignInScreenState extends State<SignInScreen> {
                         Fluttertoast.showToast(msg: "Field Can't be Empty");
                       }
                     },
-
                         child: Text("Login",style:TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold)),
                       style:ElevatedButton.styleFrom(
                         backgroundColor: Colors.transparent,
@@ -206,7 +203,6 @@ class _SignInScreenState extends State<SignInScreen> {
                         },
                             child: Text("Sign Up",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),),
                         ),
-
                       ],
                     ),
                   ),
