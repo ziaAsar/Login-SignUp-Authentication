@@ -201,7 +201,7 @@ class _SignInScreenState extends State<SignInScreen> {
                          // Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
                           Navigator.push(context, PageTransition(child: SignUpScreen(), type: PageTransitionType.leftToRight));
                         },
-                            child: Text("Sign Up2",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),),
+                            child: Text("Sign Up",style: TextStyle(fontWeight:FontWeight.bold,color: Colors.white),),
                         ),
                       ],
                     ),
